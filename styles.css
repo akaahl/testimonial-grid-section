@@ -1,0 +1,139 @@
+:root {
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: var(--light-grayish-blue);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  grid-gap: 20px;
+  width: 1200px;
+  height: 90vh;
+}
+
+.grid-items {
+  padding: 20px;
+  border-radius: 10px;
+  display: block;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.grid-container .daniel-clifford {
+  grid-area: daniel;
+  background: var(--moderate-violet);
+}
+
+.grid-items .user-profile {
+  display: grid;
+  grid-template-areas:
+    "image name"
+    "image name";
+  width: 190px;
+  margin-bottom: 10px;
+}
+
+.grid-items .user-profile img {
+  height: 45px;
+  width: 45px;
+  grid-area: image;
+  border-radius: 50%;
+  border: 3px solid #a775f1;
+}
+
+.grid-items .user-profile p {
+  margin: 0;
+}
+
+.grid-items .user-profile div {
+  grid-area: name;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.grid-items .user-profile .profile-name {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.daniel-clifford .user-profile .profile-name {
+  color: var(--white);
+}
+
+.grid-items .user-profile .profile-status {
+  grid-area: status;
+  font-weight: 500;
+}
+
+.daniel-clifford .user-profile .profile-status {
+  color: #a775f1;
+}
+
+.grid-items .quotation-logo {
+  position: absolute;
+  top: 0;
+  right: 90px;
+  z-index: 1;
+}
+
+.grid-items .short-review {
+  position: relative;
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  z-index: 5;
+  margin-bottom: 20px;
+}
+
+.daniel-clifford .short-review {
+  color: var(--white);
+}
+
+.daniel-clifford .long-review {
+  color: #a775f1;
+  font-weight: 500;
+}
+
+.jonathan-walters {
+  grid-area: jonathan;
+  background: var(--very-dark-grayish-blue);
+}
+
+.kira-whittle {
+  grid-area: kira;
+}
+
+.jeanette-harmon {
+  grid-area: jeanette;
+}
