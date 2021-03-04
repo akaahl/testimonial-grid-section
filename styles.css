@@ -266,4 +266,9 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .grid-items .long-review {
+    font-size: 15px;
+    line-height: 1.4rem;
+  }
 }
